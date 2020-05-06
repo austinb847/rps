@@ -20,7 +20,14 @@ describe("RPS#wins?") do
 
   it("returns false if game object doesnt win") do
     game = RPS.new()
-    expect(game.wins?("paper", "scissors")).to(eq(false))
+    expect(game.wins?("rock", "paper")).to(eq(false))
   end
 
+end
+
+describe("RPS#tie?") do
+  it("returns true if object and argument are both equal") do
+    game = RPS.new()
+    expect(game.tie?("rock", "rock")).to(eq(true))
+  end
 end

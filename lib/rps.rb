@@ -10,5 +10,8 @@ class RPS
       false
     end
   end
+
+  def tie?(obj, arg)
+  end
   
 end
