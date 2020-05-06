@@ -18,4 +18,9 @@ describe("RPS#wins?") do
     expect(game.wins?("paper", "rock")).to(eq(true))
   end
 
+  it("returns false if game object doesnt win") do
+    game = RPS.new()
+    expect(game.wins?("paper", "scissors")).to(eq(false))
+  end
+
 end
