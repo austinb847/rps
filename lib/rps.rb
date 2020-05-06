@@ -18,6 +18,14 @@ class RPS
   def player_choice
     @player_choice
   end
+
+  def game_running
+    @game_running
+  end
+
+  def round_number
+    @round_number
+  end
   
   def wins?(obj, arg)
     if (obj == "rock") & (arg == "scissors")
@@ -56,6 +64,16 @@ class RPS
       return "paper"
     else
       return "scissors"
+    end
+  end
+
+  def run_game()
+    while game_running
+      puts @round_number
+      if @round_number > 3
+        @game_running = false
+      end
+      @round_number += 1
     end
   end
 
