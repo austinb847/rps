@@ -6,6 +6,8 @@ class RPS
       true
     elsif (obj == "paper") & (arg == "rock")
       true
+    else
+      false
     end
   end
   
