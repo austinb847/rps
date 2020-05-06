@@ -53,3 +53,6 @@ describe("RPS#add_to_score") do
     expect(game.player_score).to(eq(1))
   end
 end
+
+
+end

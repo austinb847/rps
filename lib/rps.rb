@@ -3,6 +3,7 @@ class RPS
     @npc_score = 0
     @player_score = 0
     @round_number = 1
+    @game_running = true
   end
   
   def npc_score
@@ -41,5 +42,17 @@ class RPS
     end
   end
   
+
+  def generate_rps()
+    rand_num = rand(3)
+    if rand_num == 0
+      return "rock"
+    elsif rand_num == 1
+      return "paper"
+    else
+      return "scissors"
+    end
+  end
+
 
 end
