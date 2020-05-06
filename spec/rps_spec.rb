@@ -54,5 +54,10 @@ describe("RPS#add_to_score") do
   end
 end
 
-
+describe("RPS") do
+  it("correctly adds user choice input into RPS class as a property") do
+    user_choice = "rock"
+    game = RPS.new(user_choice)
+    expect(game.player_choice).to(eq("rock"))
+  end
 end

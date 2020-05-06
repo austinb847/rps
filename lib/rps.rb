@@ -1,5 +1,6 @@
 class RPS
   def initialize()
+    # @player_choice = player_choice
     @npc_score = 0
     @player_score = 0
     @round_number = 1
@@ -13,6 +14,10 @@ class RPS
   def player_score
     @player_score
   end
+
+  # def player_choice
+  #   @player_choice
+  # end
   
   def wins?(obj, arg)
     if (obj == "rock") & (arg == "scissors")
