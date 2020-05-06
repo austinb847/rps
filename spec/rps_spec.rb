@@ -30,4 +30,9 @@ describe("RPS#tie?") do
     game = RPS.new()
     expect(game.tie?("rock", "rock")).to(eq(true))
   end
+
+  it("returns false if object and argument are different") do
+    game = RPS.new()
+    expect(game.tie?("rock", "paper")).to(eq(false))
+  end
 end
