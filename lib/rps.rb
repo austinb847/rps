@@ -14,6 +14,8 @@ class RPS
   def tie?(obj, arg)
     if(obj == arg)
       true
+    else
+      false
     end
   end
   
