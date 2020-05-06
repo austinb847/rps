@@ -4,6 +4,8 @@ class RPS
       true
     elsif (obj == "scissors") & (arg == "paper")
       true
+    elsif (obj == "paper") & (arg == "rock")
+      true
     end
   end
   
