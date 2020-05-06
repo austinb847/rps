@@ -30,7 +30,9 @@ class RPS
   end
 
   def add_to_score(check_win)
-
+    if check_win
+      @npc_score += 1
+    end
   end
   
 
