@@ -36,3 +36,13 @@ describe("RPS#tie?") do
     expect(game.tie?("rock", "paper")).to(eq(false))
   end
 end
+
+describe("RPS#add_to_score") do
+  it("adds 1 to the computers score if .wins? returns true") do
+    game = RPS.new()
+    check_win = game.wins?("rock", "scissors")
+    game.add_to_score(check_win)
+    expect(game.npc_score).to(eq(1))
+
+  end
+end
