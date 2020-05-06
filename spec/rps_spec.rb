@@ -45,4 +45,11 @@ describe("RPS#add_to_score") do
     expect(game.npc_score).to(eq(1))
 
   end
+
+  it("adds 1 to the players score if .wins? returns false") do
+    game = RPS.new()
+    check_win = game.wins?("paper", "scissors")
+    game.add_to_score(check_win)
+    expect(game.player_score).to(eq(1))
+  end
 end

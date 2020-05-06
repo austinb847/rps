@@ -8,6 +8,10 @@ class RPS
   def npc_score
     @npc_score
   end
+
+  def player_score
+    @player_score
+  end
   
   def wins?(obj, arg)
     if (obj == "rock") & (arg == "scissors")
