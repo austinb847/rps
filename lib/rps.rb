@@ -1,6 +1,5 @@
 class RPS
-  def initialize(player_choice)
-    @player_choice = player_choice
+  def initialize()
     @npc_score = 0
     @player_score = 0
     @round_number = 1
@@ -13,10 +12,6 @@ class RPS
 
   def player_score
     @player_score
-  end
-
-  def player_choice
-    @player_choice
   end
 
   def game_running
@@ -65,6 +60,12 @@ class RPS
     else
       return "scissors"
     end
+  end
+
+  def get_player_choice()
+    puts "Choose rock, paper, or scissors"
+    player_choice = gets
+    return player_choice
   end
 
   def run_game()
