@@ -65,7 +65,7 @@ class RPS
   def get_player_choice()
     puts "Choose rock, paper, or scissors"
     player_choice = gets
-    return player_choice
+    return player_choice.chomp
   end
 
   def run_game()
@@ -74,8 +74,10 @@ class RPS
       if @round_number > 3
         @game_running = false
       end
+      player_choice = get_player_choice()
       @round_number += 1
     end
+    return player_choice
   end
 
 

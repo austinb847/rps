@@ -63,15 +63,14 @@ end
 # end
 
 describe("RPS#run_game") do
-  it("keeps running the game until 3 rounds pass. game_running property should be false after") do
-    game = RPS.new()
-    game.run_game()
-    expect(game.game_running).to(eq(false))
-  end
+  # it("keeps running the game until 3 rounds pass. game_running property should be false after") do
+  #   game = RPS.new()
+  #   game.run_game()
+  #   expect(game.game_running).to(eq(false))
+  # end
 
   it("correctly calls and gets player choice input") do
     game = RPS.new()
-    game.run_game()
-    expect(game.player_choice).to(eq("rock"))
+    expect(game.run_game()).to(eq("rock"))
   end
 end
