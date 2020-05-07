@@ -10,16 +10,32 @@ class RPS
     @npc_score
   end
 
+  def npc_score=(npc_score)
+    @npc_score = npc_score
+  end
+
   def player_score
     @player_score
+  end
+
+  def player_score=(player_score)
+    @player_score = player_score
   end
 
   def game_running
     @game_running
   end
 
+  def game_running=(game_running)
+    @game_running = game_running
+  end
+
   def round_number
     @round_number
+  end
+
+  def round_number=(round_number)
+    @round_number = round_number
   end
   
   def wins?(obj, arg)
@@ -68,17 +84,23 @@ class RPS
     return player_choice.chomp
   end
 
-  def run_game()
-    while game_running
-      puts @round_number
-      if @round_number > 3
-        @game_running = false
-      end
-      player_choice = get_player_choice()
-      @round_number += 1
-    end
-    return player_choice
-  end
+  # def run_game()
+  #   while game_running
+  #     puts @round_number
+  #     if @round_number > 3
+  #       @game_running = false
+  #     end
+  #     player_choice = get_player_choice()
+  #     puts player_choice
+  #     npc_choice = generate_rps()
+  #     puts npc_choice 
+  #     check_win = wins?(npc_choice, player_choice)
+
+
+  #     @round_number += 1
+  #   end
+    
+  # end
 
 
 end
